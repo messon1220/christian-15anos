@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Feliz 15 Anos meu amor </title>
+<title>Feliz 15 Anos meu amor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 <style>
@@ -34,7 +34,6 @@
     padding-top: calc(var(--vinyl-size) + 18px);
   }
 
-  /* ─── CANVAS PARTICLES ─── */
   #canvas {
     position: fixed;
     top: 0; left: 0;
@@ -43,9 +42,6 @@
     z-index: 0;
   }
 
-  /* ════════════════════════════════════════
-     VINYL PLAYERS
-     ════════════════════════════════════════ */
   .vinyl-player {
     position: fixed;
     top: 12px;
@@ -63,7 +59,6 @@
   .vinyl-player.left  { left: 12px; }
   .vinyl-player.right { right: 12px; }
 
-  /* disco vinil */
   .vinyl-disc {
     width: var(--vinyl-size);
     height: var(--vinyl-size);
@@ -85,7 +80,6 @@
     transition: box-shadow 0.4s ease;
   }
 
-  /* etiqueta central */
   .vinyl-label {
     position: absolute;
     top: 50%; left: 50%;
@@ -105,7 +99,6 @@
     opacity: 0.82;
   }
 
-  /* furo */
   .vinyl-label::after {
     content: '';
     position: absolute;
@@ -114,7 +107,6 @@
     background: rgba(50,16,30,0.5);
   }
 
-  /* girando */
   @keyframes spin-vinyl {
     from { transform: rotate(0deg); }
     to   { transform: rotate(360deg); }
@@ -128,7 +120,6 @@
       0 6px 24px rgba(60,20,40,0.42);
   }
 
-  /* agulha */
   .vinyl-needle-wrap {
     position: absolute;
     top: 0; right: -8%;
@@ -173,7 +164,6 @@
     box-shadow: 0 1px 3px rgba(60,20,40,0.3);
   }
 
-  /* barra de progresso */
   .vinyl-progress {
     width: var(--vinyl-size);
     height: 2px;
@@ -190,7 +180,6 @@
     transition: width 0.5s linear;
   }
 
-  /* rótulo do player */
   .vinyl-tooltip {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -210,7 +199,6 @@
     opacity: 1;
   }
 
-  /* desktop: um pouco maior */
   @media (min-width: 640px) {
     :root { --vinyl-size: 104px; }
     .vinyl-player { top: 18px; }
@@ -219,7 +207,6 @@
     .vinyl-tooltip { font-size: 11px; }
   }
 
-  /* ─── HERO ─── */
   #hero {
     min-height: 100vh;
     display: flex;
@@ -323,7 +310,6 @@
     animation: bounce 1.4s ease-in-out infinite;
   }
 
-  /* ─── SHARED SECTIONS ─── */
   section {
     position: relative;
     z-index: 1;
@@ -369,7 +355,6 @@
     margin: 0.9rem auto 2rem;
   }
 
-  /* ─── MENSAGEM ─── */
   #mensagem {
     background: linear-gradient(160deg, #fdf0f5 0%, #f5edfb 50%, #eff5fd 100%);
   }
@@ -420,7 +405,6 @@
     color: var(--text-dark);
   }
 
-  /* ─── AMOR ─── */
   #amor {
     background: linear-gradient(160deg, #fff0f5 0%, #f9eef9 50%, #eff5fd 100%);
     overflow: hidden;
@@ -482,14 +466,16 @@
   }
 
   .amor-photo-wrap img {
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: inherit;
     display: block;
   }
 
-  <img src="assets/images/christian.jpg" alt="Christian"> {
-    width: 100%; height: 100%;
+  .amor-photo-placeholder {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -584,7 +570,6 @@
     color: var(--text-mid);
   }
 
-  /* ─── ANIVERSÁRIO ─── */
   #birthday {
     text-align: center;
     background: linear-gradient(160deg, #fef8f0 0%, #fdf0f5 40%, #f5edfb 80%, #eff5fd 100%);
@@ -647,7 +632,6 @@
     padding: 0 0.5rem;
   }
 
-  /* ─── MENSAGEM SECRETA ─── */
   .secret-wrap {
     margin-top: 2.4rem;
     display: flex;
@@ -719,7 +703,6 @@
     margin-bottom: 0.4rem;
   }
 
-  /* ─── FOOTER ─── */
   footer {
     text-align: center;
     padding: 3.2rem 1.2rem 2.4rem;
@@ -756,7 +739,6 @@
     letter-spacing: 0.1em;
   }
 
-  /* ─── DIVIDER ─── */
   .divider {
     width: 100%;
     height: 1px;
@@ -765,7 +747,6 @@
     position: relative; z-index: 1;
   }
 
-  /* ─── ANIMATIONS ─── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(22px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -790,7 +771,6 @@
     to   { opacity: 1; transform: scale(1) translateY(0); }
   }
 
-  /* ─── REVEAL ─── */
   .reveal {
     opacity: 0;
     transform: translateY(26px);
@@ -818,17 +798,12 @@
   ├── README.md
   └── assets/
       ├── images/
-      │   └── christian.jpg       ← foto dele na seção de amor
+      │   └── christian.jpg
       └── audio/
-          ├── musica-dele.mp3     ← música que ELE dedicou ao namoro
-          └── musica-minha.mp3    ← música que VOCÊ dedicou ao namoro
-
-  Depois de colocar os arquivos nas pastas,
-  troque os src="" dos <audio> pelos caminhos acima.
-  ════════════════════════════════════════════
+          ├── musica-dele.mp3
+          └── musica-minha.mp3
 -->
 
-<!-- ── PLAYER ESQUERDO: música dele ── -->
 <div class="vinyl-player left" id="playerLeft"
      onclick="togglePlayer('left')"
      role="button" aria-label="Tocar música dele">
@@ -850,7 +825,6 @@
   <audio id="audioLeft" src="assets/audio/musica-dele.mp3" preload="none"></audio>
 </div>
 
-<!-- ── PLAYER DIREITO: minha música ── -->
 <div class="vinyl-player right" id="playerRight"
      onclick="togglePlayer('right')"
      role="button" aria-label="Tocar minha música">
@@ -872,8 +846,6 @@
   <audio id="audioRight" src="assets/audio/musica-minha.mp3" preload="none"></audio>
 </div>
 
-
-<!-- ───── HERO ───── -->
 <section id="hero">
   <span class="hero-badge">uma surpresa com muito amor para você</span>
   <h1 class="hero-title">Christian</h1>
@@ -889,7 +861,6 @@
 
 <div class="divider"></div>
 
-<!-- ───── MENSAGEM ───── -->
 <section id="mensagem">
   <div class="section-inner">
     <div style="text-align:center">
@@ -927,7 +898,6 @@
 
 <div class="divider"></div>
 
-<!-- ───── AMOR ───── -->
 <section id="amor">
   <div class="section-inner">
     <div style="text-align:center">
@@ -937,16 +907,11 @@
     </div>
 
     <div class="amor-block">
-      <!--
-        Foto: coloque o arquivo em assets/images/christian.jpg
-        e substitua o .amor-photo-placeholder por:
-        <img src="assets/images/christian.jpg" alt="Christian">
-      -->
       <div class="amor-photo-wrap" id="photoWrap">
+        <img src="assets/images/christian.jpg" alt="">
         <div class="amor-photo-placeholder">
           <span>🌷</span>
-          <span>Coloque a foto do Christian aqui<br>
-          (veja o comentário no código)</span>
+          <span>Coloque a foto do Christian aqui<br>(veja o comentário no código)</span>
         </div>
         <div class="amor-photo-badge">meu amor</div>
       </div>
@@ -979,7 +944,6 @@
 
 <div class="divider"></div>
 
-<!-- ───── ANIVERSÁRIO ───── -->
 <section id="birthday">
   <div class="section-inner">
     <span class="section-tag reveal">hoje é um dia especial demais</span>
@@ -1016,7 +980,6 @@
   </div>
 </section>
 
-<!-- ───── FOOTER ───── -->
 <footer>
   <span class="footer-heart">💗</span>
   <p class="footer-title">
@@ -1029,10 +992,13 @@
 </footer>
 
 <script>
-/* ─── PARTICLES ─── */
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
 resize();
 window.addEventListener('resize', resize);
 
@@ -1041,6 +1007,7 @@ const colors  = ['#f7c5d0','#d8c3e8','#b8d8f0','#e8c97a','#e89ab0','#b49ccc'];
 
 class Particle {
   constructor() { this.reset(true); }
+
   reset(init) {
     this.x = Math.random() * canvas.width;
     this.y = init ? Math.random() * canvas.height : canvas.height + 20;
@@ -1049,16 +1016,18 @@ class Particle {
     this.col  = colors[Math.floor(Math.random() * colors.length)];
     this.vy   = -(Math.random() * 0.6 + 0.2);
     this.vx   = (Math.random() - 0.5) * 0.4;
-    this.alpha= Math.random() * 0.45 + 0.15;
-    this.swing= Math.random() * Math.PI * 2;
+    this.alpha = Math.random() * 0.45 + 0.15;
+    this.swing = Math.random() * Math.PI * 2;
     this.swingSpeed = Math.random() * 0.01 + 0.005;
   }
+
   update() {
     this.swing += this.swingSpeed;
     this.x += this.vx + Math.sin(this.swing) * 0.3;
     this.y += this.vy;
     if (this.y < -30) this.reset(false);
   }
+
   draw() {
     ctx.save();
     ctx.globalAlpha = this.alpha;
@@ -1071,7 +1040,8 @@ class Particle {
   }
 }
 
-const particles = Array.from({length: 55}, () => new Particle());
+const particles = Array.from({ length: 55 }, () => new Particle());
+
 function loop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   particles.forEach(p => { p.update(); p.draw(); });
@@ -1079,15 +1049,17 @@ function loop() {
 }
 loop();
 
-/* ─── SCROLL REVEAL ─── */
 const revObs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
 }, { threshold: 0.1 });
+
 document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
 
-/* foto + amor itens */
 const photoWrap = document.getElementById('photoWrap');
 const amorItems = ['amorItem1','amorItem2','amorItem3'].map(id => document.getElementById(id));
+
 const photoObs = new IntersectionObserver(entries => {
   if (entries[0].isIntersecting) {
     photoWrap.classList.add('visible');
@@ -1095,9 +1067,9 @@ const photoObs = new IntersectionObserver(entries => {
     photoObs.disconnect();
   }
 }, { threshold: 0.18 });
+
 photoObs.observe(photoWrap);
 
-/* ─── VINYL PLAYERS ─── */
 const players = {
   left: {
     audio:    document.getElementById('audioLeft'),
@@ -1128,13 +1100,11 @@ function togglePlayer(side) {
     return;
   }
 
-  /* pausa o outro */
   if (currentSide && currentSide !== side) {
     players[other].audio.pause();
     setPlaying(other, false);
   }
 
-  /* toca */
   p.audio.play().catch(() => {});
   setPlaying(side, true);
   currentSide = side;
@@ -1152,6 +1122,7 @@ Object.entries(players).forEach(([side, p]) => {
     if (!p.audio.duration) return;
     p.progress.style.width = (p.audio.currentTime / p.audio.duration * 100) + '%';
   });
+
   p.audio.addEventListener('ended', () => {
     setPlaying(side, false);
     p.progress.style.width = '0%';
@@ -1159,10 +1130,10 @@ Object.entries(players).forEach(([side, p]) => {
   });
 });
 
-/* ─── SECRET MESSAGE ─── */
 function revealSecret() {
   const msg = document.getElementById('secretMsg');
   const btn = document.querySelector('.secret-btn');
+
   if (msg.style.display === 'block') {
     msg.style.display = 'none';
     btn.textContent = 'Abrir mensagem secreta';
@@ -1173,7 +1144,6 @@ function revealSecret() {
   }
 }
 
-/* ─── BIRTHDAY BURST ─── */
 let confettiBurst = false;
 const bdayObs = new IntersectionObserver(entries => {
   if (entries[0].isIntersecting && !confettiBurst) {
@@ -1181,6 +1151,7 @@ const bdayObs = new IntersectionObserver(entries => {
     burst();
   }
 }, { threshold: 0.4 });
+
 bdayObs.observe(document.getElementById('birthday'));
 
 function burst() {
@@ -1197,13 +1168,20 @@ function burst() {
         vx: (Math.random() - 0.5) * 2,
         alpha: 0.9,
       });
+
       tmp.update = function() {
-        this.x += this.vx; this.y += this.vy;
+        this.x += this.vx;
+        this.y += this.vy;
         this.vy += 0.04;
         this.alpha -= 0.012;
-        if (this.alpha <= 0) { this.alpha = 0; this.y = -9999; }
+        if (this.alpha <= 0) {
+          this.alpha = 0;
+          this.y = -9999;
+        }
       };
+
       particles.push(tmp);
+
       setTimeout(() => {
         const idx = particles.indexOf(tmp);
         if (idx > -1) particles.splice(idx, 1);
